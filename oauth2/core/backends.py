@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import BaseBackend
 
 from .constants import (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET,
-                        GOOGLE_REDIRECT_URI, GOOGLE_OAUTH_ENDPOINTS)
+                        GOOGLE_OAUTH_ENDPOINTS, GOOGLE_REDIRECT_URI)
 from .utils import get_google_user_details_url
 
 User = get_user_model()
