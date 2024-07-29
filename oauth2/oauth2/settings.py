@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&g2mlfmb$_qsk83q#+jf94)odfajpf%3a0r&)pn+fagu6ojhwo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,3 +122,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTHENTICATION_BACKENDS = ['core.backends.GoogleAuthBackend',
+                          'django.contrib.auth.backends.ModelBackend',]

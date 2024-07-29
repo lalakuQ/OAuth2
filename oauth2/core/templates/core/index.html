@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-signin-client_id" content="{ client_id }.apps.googleusercontent.com">
-  <title>Document</title>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>  
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
 <body>
-  {% block content %}
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  {% endblock content %}
+  <a href="google/login" id="google-signin-button">
+    <img decoding="async" src="https://developers.google.com/identity/images/g-logo.png"  alt="Google Icon">
+  </a>
+  {{google_user_details}}
+</div>
 </body>
 </html>
