@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import BaseBackend
 
 from .constants import (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET,
-                        GOOGLE_REDIRECT_URI, OAUTH_ENDPOINTS)
+                        GOOGLE_REDIRECT_URI, GOOGLE_OAUTH_ENDPOINTS)
 from .utils import get_google_user_details_url
 
 User = get_user_model()
@@ -13,7 +13,7 @@ User = get_user_model()
 
 class GoogleAuthBackend(BaseBackend):
     def _get_access_token(self, code=None):
-        response = requests.post(url=OAUTH_ENDPOINTS['token_url'],
+        response = requests.post(url=GOOGLE_OAUTH_ENDPOINTS['token_url'],
                                  data={
                                     'code': code,
                                     'client_id': GOOGLE_CLIENT_ID,
