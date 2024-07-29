@@ -22,10 +22,7 @@ def google_callback(request):
         user = authenticate(request,
                             code=request.GET.get('code'),
                             backend=GoogleAuthBackend)
-        if user:
-            login(request, user=user)
-        else:
-            print(request, 'You are not Authorized to Login')
+        login(request, user=user)
         return redirect('core:index')
     else:
         return render(request, template_name='core/index.html')
