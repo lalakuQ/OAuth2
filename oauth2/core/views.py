@@ -25,4 +25,4 @@ def google_callback(request):
         login(request, user=user)
         return redirect('core:index')
     else:
-        return render(request, template_name='core/index.html')
+        return redirect('core::index')
